@@ -57,7 +57,13 @@ import os
 import re
 import functools
 import logging
-
+def get_db_connection():
+    return mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password="shreyshukla12345",
+        database="anil_ps"
+    )
 logging.basicConfig(level=logging.ERROR)
 app = Flask(__name__)
 CORS(app)
